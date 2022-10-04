@@ -1,0 +1,118 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 403px;
+  padding: 44px 50px 52px;
+  background: $color-blue;
+
+  @media (max-width: $tablet-width) {
+    padding: 44px 50px 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+    max-width: 100%;
+    padding: 35px 30px 38px;
+  }
+}
+
+.booking-form {
+  margin: 0;
+}
+
+.booking-form__text {
+  @include montserrat-500(18px, 27px);
+  color: $color-white;
+  margin-bottom: 27px;
+
+  @media (max-width: $mobile-width) {
+    @include montserrat-500(18px, 25px);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+}
+
+.booking-form__input {
+  @include montserrat-400(14px, 21px);
+  color: $color-blue;
+  margin-bottom: 20px;
+  padding: 11px 16px;
+  border: none;
+  background: $color-white;
+
+  &:last-of-type {
+    margin-bottom: 22px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &::placeholder {
+    @include montserrat-400(14px, 21px);
+    color: rgba(1, 28, 64, 0.7);
+  }
+}
+
+.booking-form__label {
+  position: relative;
+  margin-bottom: 32px;
+
+  @media (max-width: $mobile-width) {
+    transform: translateY(3px);
+    margin-bottom: 29px;
+  }
+}
+
+.booking-form__control-mark {
+  display: block;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $color-white;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    transform: translateY(-50%);
+  }
+}
+
+.booking-form__control-label {
+  display: block;
+  @include montserrat-400(10px, 13px);
+  color: $color-white;
+  padding-left: 22px;
+
+  @media (max-width: $mobile-width) {
+    transform: translateX(5px);
+  }
+}
+
+.booking-form__checkbox:focus + .booking-form__control-mark {
+  outline: 1px solid white;
+  border: 1px solid black;
+  border-radius: 1px;
+}
+
+.booking-form__checkbox:checked + .booking-form__control-mark {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background: url("../img/svg/checked-icon.svg") no-repeat center;
+    top: 50%;
+    transform: translateY(-50%) translateX(4px);
+  }
+}
+
+.booking-form__button {
+  @include montserrat-600(14px, 21px);
+  color: $color-blue;
+  padding: 12px 0 11px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}

@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  transform: translateY(8px);
+
+  @media (max-width: $tablet-width) {
+    transform: translateY(0);
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 106px;
+
+  @media (max-width: $tablet-width) {
+    width: 87px;
+  }
+}
+
+.social__link {
+  &:hover .social__icon {
+    transform: scale(1.2, 1.2);
+  }
+
+  &:active .social__icon {
+    transform: scale(0.9, 0.9);
+  }
+}

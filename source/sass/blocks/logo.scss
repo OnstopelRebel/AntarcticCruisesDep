@@ -1,0 +1,40 @@
+.logo {
+  &--hidden {
+    visibility: hidden;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.logo__menu {
+  display: none;
+  transform: translate(-200px, 10px);
+  z-index: 15;
+
+  @media (max-width: $mobile-width) {
+    &--open {
+      display: block;
+      transform: translate(-200px, 10px);
+    }
+
+    &--nojs {
+      display: block;
+      transform: translate(10px, 15px);
+    }
+  }
+}
+
+.logo__footer {
+    margin-right: 35px;
+
+    @media (max-width: $tablet-width) {
+        margin-right: 21px;
+      }
+
+      @media (max-width: $mobile-width) {
+        margin-right: 0;
+        margin-bottom: 23px;
+      }
+}

@@ -1,0 +1,142 @@
+.advantages {
+  padding: 110px 0 120px;
+  background-color: #e3ecf6;
+  background: linear-gradient(
+      rgba(227, 236, 246, 0.9),
+      rgba(227, 236, 246, 0.9)
+    ),
+    no-repeat url("../img/jpg/background-2.jpg") center;
+  background-size: cover;
+
+  @media (max-width: $tablet-width) {
+    padding: 91px 0 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 58px 0 66px;
+  }
+}
+
+.advantages__title {
+  @include montserrat-600;
+  text-align: center;
+  padding-bottom: 49px;
+
+  @media (max-width: $tablet-width) {
+    @include montserrat-600(26px, 39px);
+    padding-bottom: 48px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include montserrat-600(24px, 36px);
+    padding-bottom: 29px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 767px;
+    padding: 0 45px;
+    grid-gap: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 15px;
+  }
+}
+
+.advantages__item {
+  max-width: 360px;
+  background-color: $color-white;
+  padding: 30px 30px 26px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 206px;
+    min-width: 206px;
+    padding: 25px 10px 20px 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 500px;
+
+    &:not(:last-of-type) {
+    }
+  }
+}
+
+.advantages__icon {
+  position: relative;
+}
+
+.advantages__icon--ship {
+  & + .advantages__subtitle {
+    padding: 16px 0 9px 0;
+
+    @media (max-width: $tablet-width) {
+      padding: 16px 0 8px 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 21px;
+    height: 26px;
+  }
+}
+.advantages__icon--inclusive {
+  top: 0;
+
+  & + .advantages__subtitle {
+    padding: 15px 0 10px 0;
+
+    @media (max-width: $tablet-width) {
+      padding: 15px 0 8px 0;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding: 12px 0 8px 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 27px;
+    height: 26px;
+  }
+}
+
+.advantages__icon--ship-2 {
+  top: 0;
+
+  & + .advantages__subtitle {
+    padding: 15px 0 9px 0;
+
+    @media (max-width: $tablet-width) {
+      padding: 15px 0 8px 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 36px;
+    height: 26px;
+  }
+}
+
+.advantages__subtitle {
+  @include montserrat-500(18px, 27px);
+
+  @media (max-width: $mobile-width) {
+    max-width: 150px;
+  }
+}
+
+.advantages__text {
+  @include montserrat-400(14px, 19.6px);
+}
